@@ -1,9 +1,21 @@
+import sixWordBank from './six-vwortle-bank.txt';
 export const boardDefault = [
-    ["", "", "", "f", "", "", ""],
-    ["", "", "", "f", "", "", ""],
-    ["", "", "", "F", "", "", ""],
-    ["", "", "", "f", "", "", ""],
-    ["", "", "", "f", "", "", ""],
-    ["", "", "", "f", "", "", ""],
-    ["", "", "", "f", "", "", ""],
+    ["", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", ""],
 ]
+
+export const generateWordSet = async () => {
+    let wordSet;
+    await fetch(sixWordBank).then((response) => response.text())
+    .then((result) => {
+        const wordArr = result.split("\n")
+        wordSet = new Set(wordArr)
+    });
+
+    return { wordSet };
+}

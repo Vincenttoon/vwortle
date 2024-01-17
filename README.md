@@ -1,7 +1,9 @@
 ## VWORTLE
 
 New:
-`useCallback`, `useContext`
+`useCallback`, `useContext`, `set()/Set`
+
+`fetch()`
 
 [Online Word Bank](https://eslforums.com/category/words-with-letters/)
 
