@@ -1524,6 +1524,7 @@ global
 glossy
 gloves
 gluten
+goalie
 golden
 google
 gospel

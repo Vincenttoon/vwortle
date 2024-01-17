@@ -1,4 +1,5 @@
 import sixWordBank from './six-vwortle-bank.txt';
+import fourWordBank from './four-vwortle-bank.txt';
 export const boardDefault = [
     ["", "", "", "", "", "", ""],
     ["", "", "", "", "", "", ""],
@@ -13,6 +14,19 @@ export const generateWordSet = async () => {
     let wordSet;
     let todaysWord;
     await fetch(sixWordBank).then((response) => response.text())
+    .then((result) => {
+        const wordArr = result.split("\n")
+        todaysWord = wordArr[Math.floor(Math.random() * wordArr.length)]
+        wordSet = new Set(wordArr)
+    });
+
+    return { wordSet, todaysWord };
+}
+
+export const generateFourWordSet = async () => {
+    let wordSet;
+    let todaysWord;
+    await fetch(fourWordBank).then((response) => response.text())
     .then((result) => {
         const wordArr = result.split("\n")
         todaysWord = wordArr[Math.floor(Math.random() * wordArr.length)]

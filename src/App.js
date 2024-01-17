@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import SixBoard from "./pages/SixBoard";
+import FourBoard from "./pages/FourBoard";
 
 import Layout from "./components/Layout";
 
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<SixBoard />} />
+          <Route path="/FourBoard" element={<FourBoard />} />
         </Routes>
       </Router>
     </Layout>

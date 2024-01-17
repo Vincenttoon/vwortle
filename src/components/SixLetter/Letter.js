@@ -1,9 +1,14 @@
 import React, { useContext, useEffect } from "react";
-import { AppContext } from "../pages/SixBoard";
+import { AppContext } from "../../pages/SixBoard";
 
 function Letter({ letterPos, attemptVal }) {
-  const { board, currAttempt, correctWord, disabledLetters, setDisabledLetters } =
-    useContext(AppContext);
+  const {
+    board,
+    currAttempt,
+    correctWord,
+    disabledLetters,
+    setDisabledLetters,
+  } = useContext(AppContext);
   const letter = board[attemptVal][letterPos];
   const correct = correctWord.toUpperCase()[letterPos] === letter;
   const almost =
@@ -12,12 +17,11 @@ function Letter({ letterPos, attemptVal }) {
     currAttempt.attempt > attemptVal &&
     (correct ? "correct" : almost ? "almost" : "error");
 
-    useEffect(() => {
-      if (letter !== "" && !correct && !almost) {
-        setDisabledLetters((prev) => [...prev, letter]);
-
-      }
-    }, [currAttempt.attempt])
+  useEffect(() => {
+    if (letter !== "" && !correct && !almost) {
+      setDisabledLetters((prev) => [...prev, letter]);
+    }
+  }, [currAttempt.attempt]);
   return (
     <div className="letter" id={letterState}>
       {letter}

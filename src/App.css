@@ -164,6 +164,15 @@ nav h1:hover {
   background-color: #3a393c;
 }
 
+.choices-div {
+  width: 65%;
+  margin: auto;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  display: flex;
+  justify-content: space-around;
+}
+
 .footer-div {
   display: flex;
   position: fixed;

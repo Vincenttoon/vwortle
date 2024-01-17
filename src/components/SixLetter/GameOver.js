@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AppContext } from "../pages/SixBoard";
+import { AppContext } from "../../pages/SixBoard";
 
 const GameOver = () => {
   const { gameOver, currAttempt, correctWord } = useContext(AppContext);
