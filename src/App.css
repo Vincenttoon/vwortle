@@ -12,11 +12,42 @@ body {
   margin: 0;
 }
 
+.header-div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+}
+
+.header-a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-icon {
+  font-size: 45px;
+  margin-top: 1vh;
+  padding: 1vh;
+
+}
+
+.header-icon:hover {
+  font-size: 60px;
+  color: #528d4e;
+  cursor: pointer;
+}
+
+.left-icon {
+  margin-left: .5vh;
+}
+
+.right-icon {
+  margin-right: .5vh;
+}
+
 nav {
   height: 60px;
   width: 100%;
   margin: 0;
-  border-bottom: 1px solid grey;
   display: grid;
   place-items: center;
 }
@@ -26,6 +57,13 @@ nav h1 {
   font-family: Helvetica, Arial, sans-serif;
   color: white;
   font-size: 45px;
+  margin-top: 1.2vh;
+}
+
+nav h1:hover {
+  cursor: pointer;
+  font-size: 55px;
+  margin-top: .8vh;
 }
 .game {
   width: 100vw;
@@ -124,4 +162,57 @@ nav h1 {
 }
 #disabled {
   background-color: #3a393c;
+}
+
+.footer-div {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  height: 3rem;
+  width: 100%;
+  background-color: #333; /* Replace with your dark color value */
+  border-top: solid;
+  border-color: #ddd; /* Replace with your light color value */
+  padding: 0;
+  justify-content: center;
+  margin-bottom: 0;
+
+  .icon-list ul {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end; /* Adjust alignment to the bottom */
+    color: #ddd; /* Replace with your light color value */
+    justify-content: space-between;
+    padding-inline-start: 0px;
+    font-size: 20px;
+    list-style: none;
+    margin: 0.5vh;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .icon-li:hover {
+    flex-direction: column;
+    color: #b49f39; /* Replace with your light-yellow color value */
+  }
+}
+
+.icon-list {
+  padding-bottom: 20px;
+}
+
+@media (max-height: 640px) {
+  .footer-div {
+    height: 2rem;
+    margin-bottom: 5px;
+
+    .icon-list ul {
+      font-size: 10px;
+      margin-bottom: 10px;
+    }
+  }
 }

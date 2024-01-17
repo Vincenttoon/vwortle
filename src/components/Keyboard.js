@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useContext } from "react";
-import { AppContext } from "../App";
+import { AppContext } from "../pages/SixBoard";
 import Key from "./Key";
 
 const Keyboard = () => {
