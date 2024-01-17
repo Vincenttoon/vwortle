@@ -10,6 +10,8 @@ function App() {
   const [board, setBoard] = useState(boardDefault);
   const [currAttempt, setCurrAttempt] = useState({ attempt: 0, letterPos: 0 });
 
+  const correctWord = "RIGHTY";
+
   const onSelectLetter = (keyVal) => {
     if (currAttempt.letterPos > 5) return;
     const newBoard = [...board];
@@ -39,7 +41,7 @@ function App() {
         <h1>vwortle</h1>
       </nav>
       <AppContext.Provider
-        value={{ board, setBoard, currAttempt, setCurrAttempt, onSelectLetter, onDelete, onEnter }}
+        value={{ board, setBoard, currAttempt, setCurrAttempt, onSelectLetter, onDelete, onEnter, correctWord }}
       >
         <div className="game">
           <Board />
