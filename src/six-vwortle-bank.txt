@@ -2064,6 +2064,7 @@ riders
 riding
 rifles
 rights
+righty
 ripped
 rising
 ritual
