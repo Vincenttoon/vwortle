@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AppContext } from "../../pages/SixBoard";
+import { AppContext } from "../../pages/SevenBoard";
 
 const Key = ({ keyVal, bigKey, disabled }) => {
   const {

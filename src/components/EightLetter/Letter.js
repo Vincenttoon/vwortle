@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { AppContext } from "../../pages/SixBoard";
+import { AppContext } from "../../pages/EightBoard";
 
 function Letter({ letterPos, attemptVal }) {
   const {
@@ -9,21 +9,41 @@ function Letter({ letterPos, attemptVal }) {
     disabledLetters,
     setDisabledLetters,
   } = useContext(AppContext);
-  const letter = board[attemptVal][letterPos];
-  const correct = correctWord.toUpperCase()[letterPos] === letter;
+
+  // Ensure correctWord is not null or undefined
+  const correctWordUpperCase = correctWord ? correctWord.toUpperCase() : "";
+
+  // Ensure letterPos is within the bounds of correctWord
+  const validLetterPos =
+    letterPos >= 0 && letterPos < correctWordUpperCase.length;
+
+  // Check if the board and correctWord are defined at the specified position
+  const letter =
+    validLetterPos && board[attemptVal] ? board[attemptVal][letterPos] : "";
+  const correct =
+    validLetterPos &&
+    board[attemptVal] &&
+    correctWordUpperCase[letterPos] === letter;
   const almost =
-    !correct && letter !== "" && correctWord.toUpperCase().includes(letter);
+    validLetterPos &&
+    board[attemptVal] &&
+    !correct &&
+    letter !== "" &&
+    correctWordUpperCase.includes(letter);
   const letterState =
+    validLetterPos &&
+    board[attemptVal] &&
     currAttempt.attempt > attemptVal &&
     (correct ? "correct" : almost ? "almost" : "error");
 
   useEffect(() => {
-    if (letter !== "" && !correct && !almost) {
+    if (validLetterPos && letter !== "" && !correct && !almost) {
       setDisabledLetters((prev) => [...prev, letter]);
     }
   }, [currAttempt.attempt]);
+
   return (
-    <div className="letter" id={letterState}>
+    <div className={`letter ${letterState}`} id={letterState}>
       {letter}
     </div>
   );

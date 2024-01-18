@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { AppContext } from "../../pages/SixBoard";
+import { AppContext } from "../../pages/SevenBoard";
 
 function Letter({ letterPos, attemptVal }) {
   const {
