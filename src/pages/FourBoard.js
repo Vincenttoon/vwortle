@@ -17,6 +17,7 @@ function FourBoard() {
     gameOver: false,
     guessedWord: false,
   });
+  const [guessedWords, setGuessedWords] = useState([]);
 
   useEffect(() => {
     generateFourWordSet().then((words) => {
@@ -35,9 +36,16 @@ function FourBoard() {
 
     console.log("Curr Word:", currWord);
     console.log("Correct Word:", correctWord);
+    console.log(guessedWords);
+
+    if (guessedWords.includes(currWord.toLowerCase())) {
+      alert("Word already guessed!");
+      return;
+    }
 
     if (wordSet.has(currWord.toLowerCase())) {
       setCurrAttempt({ attempt: currAttempt.attempt + 1, letter: 0 });
+      setGuessedWords([...guessedWords, currWord.toLowerCase()]);
     } else {
       alert("Word not found");
     }
@@ -48,7 +56,6 @@ function FourBoard() {
       return;
     }
 
-    // Change the condition here to check if attempts are greater than or equal to 5
     if (currAttempt.attempt >= 4) {
       console.log("Game over, incorrect guess.");
       setGameOver({ gameOver: true, guessedWord: false });

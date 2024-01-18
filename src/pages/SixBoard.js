@@ -17,6 +17,7 @@ function SixBoard() {
     gameOver: false,
     guessedWord: false,
   });
+  const [guessedWords, setGuessedWords] = useState([]);
 
   useEffect(() => {
     generateWordSet().then((words) => {
@@ -32,8 +33,18 @@ function SixBoard() {
     for (let i = 0; i < 6; i++) {
       currWord += board[currAttempt.attempt][i].toLowerCase();
     }
+
+    console.log("Curr Word:", currWord);
+    console.log("Correct Word:", correctWord);
+
+    if (guessedWords.includes(currWord.toLowerCase())) {
+      alert("Word already guessed!");
+      return;
+    }
+
     if (wordSet.has(currWord.toLowerCase())) {
       setCurrAttempt({ attempt: currAttempt.attempt + 1, letter: 0 });
+      setGuessedWords([...guessedWords, currWord.toLowerCase()]);
     } else {
       alert("Word not found");
     }
@@ -43,7 +54,7 @@ function SixBoard() {
       setGameOver({ gameOver: true, guessedWord: true });
       return;
     }
-    console.log(currAttempt);
+
     if (currAttempt.attempt === 5) {
       console.log("Game over, incorrect guess.");
       setGameOver({ gameOver: true, guessedWord: false });
