@@ -1,5 +1,5 @@
-import sixWordBank from './six-vwortle-bank.txt';
-import fourWordBank from './four-vwortle-bank.txt';
+import sixWordBank from './WordBanks/six-vwortle-bank.txt';
+import fourWordBank from './WordBanks/four-vwortle-bank.txt';
 export const boardDefault = [
     ["", "", "", "", "", "", ""],
     ["", "", "", "", "", "", ""],
