@@ -260,6 +260,37 @@ nav h1:hover {
   padding-bottom: 20px;
 }
 
+.rules-div {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rules-h1 {
+  text-decoration: underline;
+  text-decoration-color: #b49f39;
+  text-shadow: 1px 1px 1px #528d4e;
+}
+
+.rules-list-div ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.rule-type {
+  margin: 0;
+  text-decoration: underline;
+  text-decoration-color: #b49f39;
+  text-shadow: 1px 1px 1px #528d4e;
+}
+
+.explained {
+  margin-top: 0;
+}
+
 @media screen and (max-width: 1240px) {
   .header-div {
     flex-direction: row;

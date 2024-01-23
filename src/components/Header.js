@@ -1,8 +1,7 @@
 import React from "react";
 import { GiChest } from "react-icons/gi";
 import { FaGithubAlt } from "react-icons/fa";
-import { IoIosStats } from "react-icons/io";
-import { FaUserTie } from "react-icons/fa";
+import { FaUserTie, FaQuestion } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -12,8 +11,8 @@ const Header = () => {
           <GiChest className="header-icon left-icon" />
         </a>
 
-        <a className="header-a" href="https://github.com/Vincenttoon/vwortle">
-          <FaGithubAlt className="header-icon left-icon" />
+        <a className="header-a" href="/Rules">
+          <FaQuestion className="header-icon left-icon" />
         </a>
       </div>
       <div className="header-center">
@@ -24,11 +23,11 @@ const Header = () => {
         </a>
       </div>
       <div className="header-right">
-        <a className="header-a" href="/stats">
-          <IoIosStats className="header-icon right-icon" />
+        <a className="header-a" href="https://github.com/Vincenttoon/vwortle">
+          <FaGithubAlt className="header-icon right-icon" />
         </a>
 
-        <a className="header-a" href="https://vincent-toon-portfolio.vercel.app/">
+        <a className="header-a" href="https://vincent-toon-portfolio.vercel.app/ ">
           <FaUserTie className="header-icon right-icon" />
         </a>
       </div>

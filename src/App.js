@@ -8,6 +8,7 @@ import FiveBoard from "./pages/FiveBoard";
 import SixBoard from "./pages/SixBoard";
 import SevenBoard from "./pages/SevenBoard";
 import EightBoard from "./pages/EightBoard";
+import Rules from "./pages/Rules";
 
 
 import Layout from "./components/Layout";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/FiveBoard" element={<FiveBoard />} />
           <Route path="/SevenBoard" element={<SevenBoard />} />
           <Route path="/EightBoard" element={<EightBoard />} />
+          <Route path="/Rules" element={<Rules />} />
         </Routes>
       </Router>
     </Layout>
