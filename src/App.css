@@ -116,7 +116,6 @@ nav h1:hover {
 
 .keyboard {
   width: 80%; /* Adjusted width */
-  height: 300px;
   margin-top: 10px;
 }
 
@@ -166,7 +165,9 @@ nav h1:hover {
 
 .choices-div {
   width: 65%; /* Adjusted width */
+
   margin: auto;
+  margin-top: 0;
   padding-top: 1.5vh;
   padding-bottom: 1.5vh;
   display: flex;
@@ -312,6 +313,7 @@ nav h1:hover {
 
   .board {
     width: 90%;
+    height: 350px;
   }
 
   .keyboard {
