@@ -377,14 +377,19 @@ nav h1:hover {
     height: auto;
 
     .header-icon {
-      font-size: 30px;
+      font-size: 20px;
       margin-top: 0.5vh;
       padding: 0.5vh;
     }
 
     nav h1 {
-      font-size: 30px;
+      font-size: 25px;
       margin-top: 0.5vh;
+    }
+
+    .header-left, .header-right {
+      display: flex;
+      flex-direction: row;
     }
   }
 
