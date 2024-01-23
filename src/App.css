@@ -165,9 +165,9 @@ nav h1:hover {
 
 .choices-div {
   width: 65%; /* Adjusted width */
-
   margin: auto;
   margin-top: 0;
+  margin-bottom: 50px;
   padding-top: 1.5vh;
   padding-bottom: 1.5vh;
   display: flex;
@@ -300,17 +300,18 @@ nav h1:hover {
     height: auto;
 
     .header-icon {
-      font-size: 10px;
+      font-size: 30px;
       margin-top: 0.5vh;
       padding: 0.5vh;
     }
 
     nav h1 {
-      font-size: 10px;
+      font-size: 30px;
       margin-top: 0.5vh;
     }
 
-    .header-left, .header-right {
+    .header-left,
+    .header-right {
       display: flex;
       flex-direction: row;
     }
@@ -377,17 +378,18 @@ nav h1:hover {
     height: auto;
 
     .header-icon {
-      font-size: 10px;
+      font-size: 30px;
       margin-top: 0.5vh;
       padding: 0.5vh;
     }
 
     nav h1 {
-      font-size: 10px;
+      font-size: 30px;
       margin-top: 0.5vh;
     }
 
-    .header-left, .header-right {
+    .header-left,
+    .header-right {
       display: flex;
       flex-direction: row;
     }
