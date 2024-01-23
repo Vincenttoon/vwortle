@@ -27,7 +27,6 @@ body {
   font-size: 45px;
   margin-top: 1vh;
   padding: 1vh;
-
 }
 
 .header-icon:hover {
@@ -37,11 +36,11 @@ body {
 }
 
 .left-icon {
-  margin-left: .5vh;
+  margin-left: 0.5vh;
 }
 
 .right-icon {
-  margin-right: .5vh;
+  margin-right: 0.5vh;
 }
 
 nav {
@@ -63,7 +62,7 @@ nav h1 {
 nav h1:hover {
   cursor: pointer;
   font-size: 55px;
-  margin-top: .8vh;
+  margin-top: 0.8vh;
 }
 .game {
   width: 100vw;
@@ -72,11 +71,12 @@ nav h1:hover {
   align-items: center;
   padding-top: 10px;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .board {
-  width: 450px;
-  height: 550px;
+  width: 65%;
+  height: 560px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -144,8 +144,8 @@ nav h1:hover {
 }
 
 .key {
-  width: 50px;
-  height: 70px;
+  width: 35px;
+  height: 50px;
   margin: 5px;
   border-radius: 4px;
   display: grid;
@@ -165,12 +165,58 @@ nav h1:hover {
 }
 
 .choices-div {
-  width: 65%;
+  width: 80%;
   margin: auto;
   padding-top: 1.5vh;
   padding-bottom: 1.5vh;
   display: flex;
   justify-content: space-around;
+}
+
+.choice-button {
+  height: 5vh;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #eee;
+  color: #121212;
+  box-shadow: 2px 2px 2px #3a393c;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.choice-4:hover {
+  background-color: #b49f39;
+  font-size: 20px;
+  box-shadow: 2px 2px 2px #eee;
+  color: #eee;
+}
+
+.choice-5:hover {
+  background-color: #528d4e;
+  font-size: 20px;
+  box-shadow: 2px 2px 2px #eee;
+  color: #eee;
+}
+
+.choice-6:hover {
+  background-color: #4E728D;
+  font-size: 20px;
+  box-shadow: 2px 2px 2px #eee;
+  color: #eee;
+}
+
+.choice-7:hover {
+  background-color: #894E8D;
+  font-size: 20px;
+  box-shadow: 2px 2px 2px #eee;
+  color: #eee;
+}
+
+.choice-8:hover {
+  background-color: #A35E5C;
+  font-size: 20px;
+  box-shadow: 2px 2px 2px #eee;
+  color: #eee;
 }
 
 .footer-div {
