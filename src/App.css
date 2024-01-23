@@ -165,17 +165,18 @@ nav h1:hover {
 }
 
 .choices-div {
-  width: 75%; /* Adjusted width */
+  width: 65%; /* Adjusted width */
   margin: auto;
   padding-top: 1.5vh;
   padding-bottom: 1.5vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .choice-button {
-  height: 4vh;
-  width: 100px;
+  height: 6vh;
+  width: 120px;
+  margin: 2px;
   border-radius: 10px;
   background-color: #eee;
   color: #121212;
@@ -291,7 +292,7 @@ nav h1:hover {
   margin-top: 0;
 }
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 1080px) {
   .header-div {
     flex-direction: row;
     align-items: center;
@@ -383,7 +384,6 @@ nav h1:hover {
   .board {
     width: 48%;
   }
-
 
   .keyboard {
     width: 48%;
