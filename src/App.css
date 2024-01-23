@@ -297,7 +297,7 @@ nav h1:hover {
   .header-div {
     flex-direction: row;
     align-items: center;
-    height: 50px;
+    height: auto;
 
     .header-icon {
       font-size: 20px;
@@ -308,6 +308,11 @@ nav h1:hover {
     nav h1 {
       font-size: 25px;
       margin-top: 0.5vh;
+    }
+
+    .header-left, .header-right {
+      display: flex;
+      flex-direction: row;
     }
   }
 
